@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file alias="main.qml">qml/main.qml</file>
+        <file alias="Shortcuts.qml">qml/Shortcuts.qml</file>
+        <file alias="Components/CustomOrbitCameraController.qml">qml/Components/CustomOrbitCameraController.qml</file>
+        <file alias="Components/CubeFace.qml">qml/Components/CubeFace.qml</file>
+        <file alias="Components/CubeCell.qml">qml/Components/CubeCell.qml</file>
+        <file alias="Components/RubiksCube.qml">qml/Components/RubiksCube.qml</file>
+        <file alias="Components/HelperOverlay.qml">qml/Components/HelperOverlay.qml</file>
+    </qresource>
+</RCC>
