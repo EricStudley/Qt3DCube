@@ -2,6 +2,8 @@
 
 Rubik's cube in Qt/QML.
 
+![Screenshot](QtCube3D.png)
+
 ## Code Structure
 
 ### Main.qml
