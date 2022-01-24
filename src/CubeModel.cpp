@@ -1,33 +1,35 @@
 #include "CubeModel.h"
 
+constexpr auto CUBE_SIZE = 100;
+
 CubeModel::CubeModel(QObject *parent) : QAbstractListModel(parent)
 {
-    m_objects.append(new CubeObject(QVector3D(-100, 100, -100), {Side::Up, Side::Back, Side::Left}));
-    m_objects.append(new CubeObject(QVector3D(0, 100, -100),     { Side::Up, Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(100, 100, -100),   { Side::Up, Side::Right, Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(-100, 100, 0),     { Side::Up, Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(0, 100, 0),        { Side::Up }));
-    m_objects.append(new CubeObject(QVector3D(100, 100, 0),      { Side::Up, Side::Right }));
-    m_objects.append(new CubeObject(QVector3D(-100, 100, 100),   { Side::Up, Side::Front, Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(0, 100, 100),      { Side::Up, Side::Front }));
-    m_objects.append(new CubeObject(QVector3D(100, 100, 100),    { Side::Up, Side::Front, Side::Right }));
-    m_objects.append(new CubeObject(QVector3D(-100, 0, -100),    { Side::Back, Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(0, 0, -100),       { Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(100, 0, -100),     { Side::Right, Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(-100, 0, 0),       { Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(100, 0, 0),        { Side::Right }));
-    m_objects.append(new CubeObject(QVector3D(-100, 0, 100),     { Side::Front, Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(0, 0, 100),        { Side::Front }));
-    m_objects.append(new CubeObject(QVector3D(100, 0, 100),      { Side::Front, Side::Right }));
-    m_objects.append(new CubeObject(QVector3D(-100, -100, -100), { Side::Back, Side::Left, Side::Down }));
-    m_objects.append(new CubeObject(QVector3D(0, -100, -100),    { Side::Down, Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(100, -100, -100),  { Side::Down, Side::Right, Side::Back }));
-    m_objects.append(new CubeObject(QVector3D(-100, -100, 0),    { Side::Down, Side::Left }));
-    m_objects.append(new CubeObject(QVector3D(0, -100, 0),       { Side::Down }));
-    m_objects.append(new CubeObject(QVector3D(100, -100, 0),     { Side::Down, Side::Right }));
-    m_objects.append(new CubeObject(QVector3D(-100, -100, 100),  { Side::Front, Side::Left, Side::Down }));
-    m_objects.append(new CubeObject(QVector3D(0, -100, 100),     { Side::Front, Side::Down }));
-    m_objects.append(new CubeObject(QVector3D(100, -100, 100),   { Side::Front, Side::Right, Side::Down }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  CUBE_SIZE, -CUBE_SIZE), { Side::Up, Side::Back, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,           CUBE_SIZE, -CUBE_SIZE), { Side::Up, Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   CUBE_SIZE, -CUBE_SIZE), { Side::Up, Side::Right, Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  CUBE_SIZE,  0),         { Side::Up, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,           CUBE_SIZE,  0),         { Side::Up }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   CUBE_SIZE,  0),         { Side::Up, Side::Right }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  CUBE_SIZE,  CUBE_SIZE), { Side::Up, Side::Front, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,           CUBE_SIZE,  CUBE_SIZE), { Side::Up, Side::Front }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   CUBE_SIZE,  CUBE_SIZE), { Side::Up, Side::Front, Side::Right }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  0,         -CUBE_SIZE), { Side::Back, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,           0,         -CUBE_SIZE), { Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   0,         -CUBE_SIZE), { Side::Right, Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  0,          0),         { Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   0,          0),         { Side::Right }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE,  0,          CUBE_SIZE), { Side::Front, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,           0,          CUBE_SIZE), { Side::Front }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,   0,          CUBE_SIZE), { Side::Front, Side::Right }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE, -CUBE_SIZE, -CUBE_SIZE), { Side::Back, Side::Left, Side::Down }));
+    m_objects.append(new CubeObject(QVector3D(0,          -CUBE_SIZE, -CUBE_SIZE), { Side::Down, Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,  -CUBE_SIZE, -CUBE_SIZE), { Side::Down, Side::Right, Side::Back }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE, -CUBE_SIZE,  0),         { Side::Down, Side::Left }));
+    m_objects.append(new CubeObject(QVector3D(0,          -CUBE_SIZE,  0),         { Side::Down }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,  -CUBE_SIZE,  0),         { Side::Down, Side::Right }));
+    m_objects.append(new CubeObject(QVector3D(-CUBE_SIZE, -CUBE_SIZE,  CUBE_SIZE), { Side::Front, Side::Left, Side::Down }));
+    m_objects.append(new CubeObject(QVector3D(0,          -CUBE_SIZE,  CUBE_SIZE), { Side::Front, Side::Down }));
+    m_objects.append(new CubeObject(QVector3D(CUBE_SIZE,  -CUBE_SIZE,  CUBE_SIZE), { Side::Front, Side::Right, Side::Down }));
 }
 
 int CubeModel::rowCount(const QModelIndex &) const
