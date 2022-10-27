@@ -1,5 +1,5 @@
-import QtQuick 2.14
-import Qt3D.Input 2.14
+import QtQuick
+import Qt3D.Input
 
 import Cube 1.0
 
@@ -14,9 +14,9 @@ MouseHandler {
 
     onTiltChanged: camera.tiltAboutViewCenter(tilt)
 
-    onPressed: mousePoint = Qt.point(mouse.x, mouse.y)
+    onPressed: (mouse) => mousePoint = Qt.point(mouse.x, mouse.y)
 
-    onPositionChanged: mouseMove(mouse)
+    onPositionChanged: (mouse) => mouseMove(mouse)
 
     function mouseMove(mouse) {
         if (mouse.buttons === 1) {

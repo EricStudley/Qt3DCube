@@ -12,7 +12,7 @@ ApplicationWindow {
     color: "black"
     title: qsTr("Rubix Qube")
 
-    property bool helper: true
+    property bool helper: false
 
     signal rotateCamera(int side)
 

@@ -10,7 +10,7 @@ Entity {
 
     property alias model: model.model
 
-    property var matrix
+    property matrix4x4 matrix
 
     Connections {
         target: cubeModel

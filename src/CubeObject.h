@@ -3,8 +3,6 @@
 #include <QMatrix4x4>
 #include <QVariantList>
 
-#include "CubeEnums.h"
-
 class CubeObject
 {
 public:
