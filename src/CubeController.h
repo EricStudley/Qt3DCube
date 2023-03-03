@@ -31,6 +31,8 @@ class CubeController : public QObject
 public:
     explicit CubeController(CubeModel *cubeModel, QObject *parent = nullptr);
 
+    Q_INVOKABLE void setCubeState(QString state);
+
     Q_INVOKABLE void shuffleCube();
     Q_INVOKABLE void solveCube();
     Q_INVOKABLE void rotateCubeSide(const Side &side, const bool clockwise);

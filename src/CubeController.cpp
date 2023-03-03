@@ -10,6 +10,11 @@ CubeController::CubeController(CubeModel *cubeModel, QObject *parent)
     processCommands->start(100);
 }
 
+void CubeController::setCubeState(QString state)
+{
+
+}
+
 void CubeController::shuffleCube()
 {
     for (int i = 0; i < 50; i++) {

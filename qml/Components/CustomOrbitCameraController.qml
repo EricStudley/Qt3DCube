@@ -1,5 +1,5 @@
-import QtQuick
-import Qt3D.Input
+import QtQuick 2.14
+import Qt3D.Input 2.12
 
 import Cube 1.0
 

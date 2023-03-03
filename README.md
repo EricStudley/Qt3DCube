@@ -1,8 +1,8 @@
-# QtCube3D
+# Qt3DCube
 
 Rubik's cube in Qt/QML.
 
-![Screenshot](QtCube3D.png)
+![Screenshot](images/Qt3DCube.gif)
 
 ## Code Structure
 
